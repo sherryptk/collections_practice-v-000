@@ -33,12 +33,11 @@ end
 
 def find_a(array)
   a_words = []
-  array.each do |e|
+  array.collect do |e|
     if e.start_with?("a")
-      a_words << e
+      e
     end
   end
-  a_words
 end
 
 def sum_array(array)
@@ -48,18 +47,6 @@ def sum_array(array)
   end
   total
 end
-
-# def add_s(array)
-#   plural = []
-#   array.each do |e|
-#     if e == array[1]
-#       plural << e
-#     else
-#       plural << e + "s"
-#     end
-#   end
-#     plural
-# end
 
 def add_s(array)
   array.collect do |e|
