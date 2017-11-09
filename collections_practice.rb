@@ -24,11 +24,9 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  kesha = []
   array.collect do |e|
-    kesha << e.sub!(/(?<=.{2})./, "$")
+    e[2] = $
   end
-  kesha
 end
 
 def find_a(array)
