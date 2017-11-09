@@ -62,7 +62,6 @@ end
 # end
 
 def add_s(array)
-  plural = []
   array.collect do |e|
     if e == array[1]
       e
