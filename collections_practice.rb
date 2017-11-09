@@ -25,7 +25,7 @@ end
 
 def kesha_maker(array)
   kesha = []
-  array.each do |e|
+  array.collect do |e|
     kesha << e.sub!(/(?<=.{2})./, "$")
   end
   kesha
