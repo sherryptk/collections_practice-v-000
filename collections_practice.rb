@@ -24,21 +24,15 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  kesha = []
   array.each do |e|
-    kesha << e.sub!(/(?<=.{2})./, "$")
+    e[2] = "$"
   end
-  kesha
 end
 
 def find_a(array)
-  a_words = []
-  array.each do |e|
-    if e.start_with?("a")
-      a_words << e
-    end
+  array.find_all do |e|
+    e[0] == "a"
   end
-  a_words
 end
 
 def sum_array(array)
@@ -50,13 +44,11 @@ def sum_array(array)
 end
 
 def add_s(array)
-  plural = []
-  array.each do |e|
+  array.collect do |e|
     if e == array[1]
-      plural << e
+      e
     else
-      plural << e + "s"
+       e + "s"
     end
   end
-    plural
 end
