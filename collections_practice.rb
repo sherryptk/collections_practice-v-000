@@ -49,14 +49,25 @@ def sum_array(array)
   total
 end
 
+# def add_s(array)
+#   plural = []
+#   array.each do |e|
+#     if e == array[1]
+#       plural << e
+#     else
+#       plural << e + "s"
+#     end
+#   end
+#     plural
+# end
+
 def add_s(array)
   plural = []
-  array.each do |e|
+  array.collect do |e|
     if e == array[1]
-      plural << e
+      e
     else
-      plural << e + "s"
+       e + "s"
     end
   end
-    plural
 end
