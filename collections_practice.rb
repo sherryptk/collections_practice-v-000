@@ -35,6 +35,7 @@ def find_a(array)
   a_words = []
   array.find_all do |e|
     e[0] = "a"
+  end
 end
 
 def sum_array(array)
